@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+
+
+  <div class="Title">
+    <h1><%= title %></h1>  
+  </div>
+  <ul>
+    <% for(let items of listItems) { %>
+        <li>
+          <div class="box-list"><input type="checkbox" id="check" value="false">
+            <p name="itm"><%= items %></p>
+          </div>
+        </li>
+    <% }%>
+  </ul>
+  <form action="/" method="post">
+    <input type="text" name="task" id="task"  placeholder="Insert Task">
+    <button type="submit" name="list" value=<%= title %> >+</button>
+  </form>
+
+
+
+<%- include("partials/footer.ejs") %>
